@@ -13,7 +13,7 @@ import java.util.List;
 public class NotaController {
 
     @Autowired
-    public NotaComponent notaComponent;
+    private NotaComponent notaComponent;
 
     @GetMapping("/titulo/{titulo}")
     public Nota buscarNota(@PathVariable(value = "titulo") String titulo){
@@ -34,4 +34,5 @@ public class NotaController {
     public void salvar(@RequestBody Nota nota){
         notaComponent.salvar(nota);
     }
+
 }
